@@ -48,16 +48,12 @@ const Assessment = require('./src/site/_includes/components/Assessment');
 const Author = require('./src/site/_includes/components/Author');
 const AuthorsDate = require('./src/site/_includes/components/AuthorsDate');
 const Banner = require('./src/site/_includes/components/Banner');
-const Breadcrumbs = require('./src/site/_includes/components/Breadcrumbs');
 const CodelabsCallout = require('./src/site/_includes/components/CodelabsCallout');
-const Hero = require('./src/site/_includes/components/Hero');
 const includeRaw = require('./src/site/_includes/components/includeRaw');
 const LanguageList = require('./src/site/_includes/components/LanguageList');
 const Meta = require('./src/site/_includes/components/Meta');
-const PathCard = require('./src/site/_includes/components/PathCard');
 const SignPosts = require('./src/site/_includes/components/SignPosts');
 const StackOverflow = require('./src/site/_includes/components/StackOverflow');
-const Tooltip = require('./src/site/_includes/components/Tooltip');
 const YouTubePlaylist = require('./src/site/_includes/components/YouTubePlaylist');
 
 // Collections
@@ -104,7 +100,6 @@ const {latestPostByTags} = require('./src/site/_filters/latest-post-by-tags');
 const {calendarLink} = require('./src/site/_filters/calendar-link');
 
 const disableLazyLoad = require('./src/site/_transforms/disable-lazy-load');
-const {purifyCss} = require('./src/site/_transforms/purify-css');
 const {minifyHtml} = require('./src/site/_transforms/minify-html');
 
 // Shared dependencies between web.dev and developer.chrome.com
@@ -150,20 +145,6 @@ module.exports = function (config) {
   // to quickly find collection items without looping.
   config.addCollection('memoized', (collection) => {
     return memoize(collection.getAll());
-  });
-
-  // Filters through all collection items and finds content that has
-  // CSS_ORIGIN set to 'next'. This allows shortcodes to determine if we
-  // are in a design system context or a legacy context
-  config.addCollection('designSystemGlobals', (collection) => {
-    global.__designSystemPaths = new Set(
-      collection
-        .getAll()
-        .filter(({data}) => data.CSS_ORIGIN === 'next')
-        .map(({filePathStem}) => filePathStem),
-    );
-
-    return global.__designSystemPaths;
   });
 
   // ----------------------------------------------------------------------------
@@ -215,7 +196,6 @@ module.exports = function (config) {
   config.addShortcode('AuthorsDate', AuthorsDate);
   config.addPairedShortcode('Banner', Banner);
   config.addPairedShortcode('Blockquote', Blockquote);
-  config.addShortcode('Breadcrumbs', Breadcrumbs);
   config.addShortcode('BrowserCompat', BrowserCompat);
   config.addShortcode('CodelabsCallout', CodelabsCallout);
   config.addShortcode('Codepen', Codepen);
@@ -225,17 +205,14 @@ module.exports = function (config) {
   config.addPairedShortcode('Details', Details);
   config.addPairedShortcode('DetailsSummary', DetailsSummary);
   config.addShortcode('Glitch', Glitch);
-  config.addShortcode('Hero', Hero);
   config.addShortcode('IFrame', IFrame);
   config.addShortcode('Img', Img);
   config.addShortcode('Instruction', Instruction);
   config.addPairedShortcode('Label', Label);
   config.addShortcode('LanguageList', LanguageList);
   config.addShortcode('Meta', Meta);
-  config.addShortcode('PathCard', PathCard);
   config.addShortcode('SignPosts', SignPosts);
   config.addShortcode('StackOverflow', StackOverflow);
-  config.addShortcode('Tooltip', Tooltip);
   config.addShortcode('Widget', Widget);
   config.addShortcode('Video', Video);
   config.addShortcode('YouTube', YouTube);
@@ -250,7 +227,6 @@ module.exports = function (config) {
   }
 
   if (isProd || isStaging) {
-    config.addTransform('purifyCss', purifyCss);
     config.addTransform('minifyHtml', minifyHtml);
   }
 

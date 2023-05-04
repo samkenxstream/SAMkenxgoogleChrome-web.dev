@@ -18,7 +18,7 @@ tags:
 
 대부분의 브라우저는 PWA(Progressive Web App)가 특정 기준을 충족할 때 설치할 수 있음을 사용자에게 나타냅니다. 표시기의 예로는 주소 표시줄의 설치 버튼이나 오버플로 메뉴의 설치 메뉴 항목이 있습니다.
 
-<div class="w-columns">
+<div class="switcher">
   <figure id="browser-install-promo">{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/O9KXz4aQXm3ZOzPo98uT.png", alt="설치 표시기가 표시된 검색주소창의 스크린샷.", width="800", height="307" %}<figcaption> 브라우저 제공 설치 프로모션(데스크톱)</figcaption></figure>
   <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/bolh05TCEeT7xni4eUTG.png", alt="브라우저 제공 설치 프로모션 스크린샷", width="800", height="307" %}<figcaption> 브라우저 제공 설치 프로모션(모바일)</figcaption></figure>
 </div>
@@ -45,7 +45,5 @@ tags:
 - [Edge](https://docs.microsoft.com/microsoft-edge/progressive-web-apps#requirements)
 - [파이어폭스](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Installable_PWAs)
 - [오페라](https://dev.opera.com/articles/installable-web-apps/)
-- [삼성인터넷](https://hub.samsunginter.net/docs/ambient-badging/)
-- [UC 브라우저](https://plus.ucweb.com/docs/pwa/docs-en/zvrh56)
 
 {% Aside %} Android에서 웹 앱 매니페스트에 `related_applications` 및 `"prefer_related_applications": true` 포함되어 있으면 사용자는 Google Play 스토어로 이동하고 [대신 지정된 Android 앱을 설치하라는 메시지가 표시](https://developer.chrome.com/blog/app-install-banners-native/)됩니다. {% endAside %}

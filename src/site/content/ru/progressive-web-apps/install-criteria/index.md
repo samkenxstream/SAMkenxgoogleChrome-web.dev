@@ -18,7 +18,7 @@ tags:
 
 Большинство браузеров указывают пользователю, что прогрессивное веб-приложение (PWA) можно установить, если оно соответствует определенным критериям. Среди индикаторов — кнопка «Установить» в адресной строке или пункт «Установить» в дополнительном меню.
 
-<div class="w-columns">
+<div class="switcher">
   <figure id="browser-install-promo">{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/O9KXz4aQXm3ZOzPo98uT.png", alt="Скриншот омнибокса с отображаемым индикатором установки.", width="800", height="307" %}<figcaption> Браузер предлагает установку (настольный компьютер)</figcaption></figure>
   <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/bolh05TCEeT7xni4eUTG.png", alt="Скриншот браузера, предлагающего установку.", width="800", height="307" %} <figcaption> Браузер предлагает установку (мобильное устройство) </figcaption></figure>
 </div>
@@ -45,7 +45,5 @@ tags:
 - [Edge](https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps#requirements)
 - [Firefox](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Installable_PWAs)
 - [Opera](https://dev.opera.com/articles/installable-web-apps/)
-- [Samsung Internet](https://hub.samsunginter.net/docs/ambient-badging/)
-- [UC Browser](https://plus.ucweb.com/docs/pwa/docs-en/zvrh56)
 
 {% Aside %} На Android, если манифест веб-приложения включает `related_applications` и `"prefer_related_applications": true`, пользователь будет перенаправлен в магазин Google Play и вместо этого ему будет предложено [установить указанное приложение Android.](https://developer.chrome.com/blog/app-install-banners-native/) {% endAside %}

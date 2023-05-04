@@ -749,6 +749,7 @@ video,
 @import 'blocks/numbered-headers';
 @import 'blocks/pagination';
 @import 'blocks/pill';
+@import 'blocks/post-credits';
 @import 'blocks/preview-pagination';
 @import 'blocks/prose';
 @import 'blocks/site-footer';
@@ -803,22 +804,8 @@ video,
 @import 'pages/pattern';
 @import 'pages/spaces';
 
-// Temporary rollout patches
-@import 'rollout';
-
 // Import unresolved states for lit-elements
 @import 'unresolved';
-
-/// LEGACY EXTENSIONS
-/// These elements are everywhere and to replace them site-wide would be
-/// a massive project, so they use @extend to pick up new styles
-.w-visually-hidden {
-  @extend .visually-hidden;
-}
-
-.w-columns {
-  @extend .switcher;
-}
 
 // Render gorko utilities
 @include generate-utility-classes();

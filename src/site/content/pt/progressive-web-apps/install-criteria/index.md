@@ -18,7 +18,7 @@ A maioria dos usuários está familiarizada com a instalação de aplicativos e 
 
 A maioria dos navegadores indica ao usuário que seu Progressive Web App (PWA) pode ser instalado quando atende a determinados critérios. Entre exemplos de indicadores, temos o botão Instalar na barra de endereço ou o item de menu Instalar no menu suspenso.
 
-<div class="w-columns">
+<div class="switcher">
   <figure id="browser-install-promo"> {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/O9KXz4aQXm3ZOzPo98uT.png", alt="Captura de tela do omnibox com indicador de instalação visível.", width="800", height="307" %} <figcaption> Divulgação de instalação fornecida pelo navegador (desktop) </figcaption></figure>
   <figure> {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/bolh05TCEeT7xni4eUTG.png", alt="Captura de tela da divulgação de instalação fornecida pelo navegador.", width="800", height="307" %} <figcaption> Divulgação de instalação fornecida pelo navegador (dispositivos móveis) </figcaption></figure>
 </div>
@@ -45,7 +45,5 @@ Outros navegadores têm critérios de instalação semelhantes, embora possa hav
 - [Edge](https://docs.microsoft.com/microsoft-edge/progressive-web-apps#requirements)
 - [Firefox](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Installable_PWAs)
 - [Opera](https://dev.opera.com/articles/installable-web-apps/)
-- [Samsung Internet](https://hub.samsunginter.net/docs/ambient-badging/)
-- [UC Browser](https://plus.ucweb.com/docs/pwa/docs-en/zvrh56)
 
 {% Aside %} No Android, se o manifesto do aplicativo da web incluir `related_applications` e `"prefer_related_applications": true` , o usuário será direcionado para a Google Play Store e [solicitado a instalar o aplicativo Android especificado](https://developer.chrome.com/blog/app-install-banners-native/). {% endAside %}

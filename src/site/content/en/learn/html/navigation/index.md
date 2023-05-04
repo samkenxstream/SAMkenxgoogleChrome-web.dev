@@ -112,7 +112,7 @@ that a section has a role of `navigation`, a landmark role.
 
 Including the [`aria-label`](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute
 provides a brief description of the purpose of the navigation. In this case, as the value of the attribute is redundant to
-text that is visible on the page, it is preferable to use [`arial-labelledby`](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+text that is visible on the page, it is preferable to use [`aria-labelledby`](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 to reference the visible text.
 
 We can change the non-semantic `<div>` to a paragraph `<p>`, then add an [`id`](/learn/html/attributes/#id) so it can be referenced. We then use `aria-labelledby`:
@@ -167,7 +167,7 @@ two table-of-contents navigation components and hiding one or the other with CSS
 Including two identical widgets to only show one is an anti-pattern. The extra bytes are negligible. Hiding HTML content from
 all users by using CSS `display: none` is appropriate. The issue is that, on wide screens, the table of contents comes before `#main`;
 and on narrower screens, the table of contents is nested within #main. Using the keyboard to skip to content skips over the table of
-ontents on a wide screen. While users are accustomed to content being responsive and changing location when they change devices or
+contents on a wide screen. While users are accustomed to content being responsive and changing location when they change devices or
 increase their font size, they do not expect the tab order to change when they do so. Page layouts should be accessible, predictable,
 and consistent across a site. Here, the location of the table of contents is not predictable.
 
@@ -331,7 +331,7 @@ and the `aria-label` acts as the `alt` attribute on an `<img>`would.
 Global navigation is the navigation section leading to the top-level pages of the website that is the same on every page of a site.
 A site's global navigation may also be made up of tabs that open nested lists of links that link to all the subsections of a site or other menus.
 It may include titled sections, buttons, and search widgets. These additional features aren't a requirement. What is required is that
-the navigation appears on every page, and is the same on every page; with `aria-current="current"` on any links to the current page, of course.
+the navigation appears on every page, and is the same on every page; with `aria-current="page"` on any links to the current page, of course.
 
 Global navigation provides a consistent means of traveling anywhere in the application or website. Google doesn't have global
 navigation at the top of the page. Yahoo! does. While all the main Yahoo! properties have different styles, the content for
